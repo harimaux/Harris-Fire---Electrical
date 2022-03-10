@@ -1,0 +1,777 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #dfdfdf;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin: 1em;
+    transition: 0.5s ease-in-out;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(53, 50, 50);
+    transition: 0.5s ease-in-out;
+}
+
+nav a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+nav img {
+    margin: 1em;
+    transition: 0.5s ease-in-out;
+}
+
+nav img:hover {
+    transform: scale(1.1)
+}
+
+#btnMobileMenu,
+#btnMobileMenu_b {
+    visibility: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 0.5em;
+}
+
+/* SLIDESHOW */
+
+#slideshow img {
+    width: 100%;
+    filter: brightness(0.8);
+}
+
+#slideshow>div {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: -100;
+}
+
+/* SLIDESHOW TEXT */
+
+.home_info {
+    display: flex;
+    width: 45%;
+    z-index: 150;
+    margin: 4.5em;
+    padding: 2em;
+    background-color: rgba(190, 69, 32, 0.904);
+    color: rgb(235, 235, 235);
+    font-size: 1vw;
+    border-radius: 5px;
+}
+
+.home_info_text {
+    padding-right: 2em;
+}
+
+.home_info_contact {
+    border-left: solid 2px rgb(235, 235, 235);
+    padding-left: 2em;
+}
+
+/* HOMEPAGE */
+
+.home_container {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+section img {
+    width: 150px;
+}
+
+.home_container section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.membership_link_1,
+.membership_link_2,
+.legislation_link,
+.scottish_fire_link {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+
+.scottish_fire_links {
+    display: flex;
+    flex-direction: column;
+}
+
+.home_bar {
+    height: 310px;
+    width: 2px;
+    background-color: rgb(53, 50, 50);
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #38383d;
+    height: auto;
+}
+
+.footer_logo img {
+    width: 100px;
+    transition: 0.5s ease-in-out;
+}
+
+.footer_logo img:hover {
+    transform: scale(1.1);
+}
+
+.footer_info {
+    display: flex;
+    justify-content: center;
+    color: rgb(235, 235, 235);
+}
+
+.footer_info div {
+    padding: 3em;
+}
+
+.footer_contact a {
+    color: khaki;
+}
+
+/* BUTTONS/LINKS */
+
+.scottish_fire_links a,
+.membership_link_1 a,
+.membership_link_2 a,
+.legislation_link a {
+    text-decoration: none;
+    color: rgb(235, 235, 235);
+    margin: 0.1em;
+    padding: 0.8em;
+    margin: 1em;
+    background-color: rgba(190, 69, 32, 0.856);
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    transition: ease-in-out 0.2s;
+}
+
+.membership_link_1 a:hover,
+.membership_link_2 a:hover,
+.legislation_link a:hover,
+.scottish_fire_links a:hover {
+    background-color: rgba(224, 218, 216, 0.863);
+    color: rgb(61, 58, 58);
+    box-shadow:
+        0 0 10px 5px rgba(255, 255, 255, 0.281),
+        0 0 20px 5px rgb(199, 38, 38),
+        0 0 10px 5px rgb(236, 64, 64);
+    /*         box-shadow:
+        0 0 60px 30px #fff,   inner white
+        0 0 100px 60px #f0f, middle magenta 
+        0 0 140px 90px #0ff; outer cyan  */
+}
+
+/* FIRE RISK PAGE */
+
+.risk_container {
+    position: relative;
+}
+
+.risk_container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url("fire_risk_img.jpg");
+    filter: brightness(0.3);
+    z-index: -10;
+}
+
+.risk_box {
+    background-color: #dfdfdfdc;
+    width: 50%;
+    margin: 2em;
+    padding: 2em;
+    border-radius: 5px;
+}
+
+.summary_box {
+    padding: 2em;
+    margin: 2em;
+    width: 60%;
+    background-color: rgba(190, 69, 32, 0.904);
+    border-radius: 5px;
+    line-height: 2.5em;
+}
+
+.summary_box li {
+    padding: 0.5em;
+}
+
+.risk_logo {
+    position: absolute;
+    right: 0;
+    padding-right: 200px;
+    padding-top: 100px;
+}
+
+/* FIRE ALARMS */
+
+.alarm_background {
+    width: 100%;
+    position: absolute;
+    z-index: -100;
+    filter: brightness(0.6);
+}
+
+.alarm_background_rotated {
+    display: none;
+}
+
+.alarms_container {
+    padding: 2em;
+}
+
+.alarms_box1 {
+    width: 50%;
+    background-color: #dfdfdfdc;
+    padding: 2em;
+    border-radius: 5px;
+}
+
+.alarms_box2 {
+    width: 50%;
+    background-color: #dfdfdfdc;
+    padding: 2em;
+    border-radius: 5px;
+    margin-top: 2em;
+}
+
+.alarms_box3 {
+    width: 65%;
+    background-color: rgba(190, 69, 32, 0.904);
+    padding: 2em;
+    border-radius: 5px;
+    margin-top: 2em;
+}
+
+.alarms_logo {
+    position: absolute;
+    right: 0;
+    padding-right: 200px;
+    padding-top: 100px;
+    width: 500px;
+}
+
+/* FIRE EXTTINGUISHERS PAGE */
+
+.fire_ex_container {
+    position: relative;
+}
+
+.fire_ex_container::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-image: url("buiding_fire.jpg");
+    filter: brightness(0.3);
+    z-index: -10;
+    top: -0px;
+}
+
+.fire_ex_dummy_img {
+    width: 20%;
+    position: fixed;
+    top: 90px;
+    right: 150px;
+}
+
+.fire_ex_alternate a {
+    color: rgb(235, 235, 235);
+}
+
+.fire_ex_container section {
+    padding: 4em;
+    padding-bottom: 2em;
+    width: 60%;
+    color: rgb(235, 235, 235);
+}
+
+.fire_ex_container h1 {
+    padding: 2em;
+    padding-bottom: 0;
+    padding-top: 0;
+    color: rgb(235, 235, 235);
+}
+
+.fire_ex_container h2 {
+    padding-top: 0;
+}
+
+.subsection {
+    text-align: center;
+    padding: 2em;
+}
+
+.subsection img {
+    width: 250px;
+    float: left;
+    margin-right: 3.5em;
+    margin-bottom: 2em;
+    transform: translateY(8px);
+    border: 2px solid rgba(190, 69, 32, 0.904);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.subsection img:hover {
+    filter: brightness(0.4);
+}
+
+.subsection p {
+    text-align: justify;
+}
+
+#exImages {
+    width: 100%;
+}
+
+#exImages img {
+    width: 20%;
+    position: fixed;
+    top: 90px;
+    right: 150px;
+}
+
+#exImagesMobile {
+    display: none;
+}
+
+/* CCTV PAGE */
+
+.cctv_background {
+    position: absolute;
+    width: 100%;
+    z-index: -100;
+    filter: brightness(0.6)
+}
+
+.cctv_container {
+    padding: 2em;
+}
+
+.cctv_box1 {
+    width: 40%;
+    padding: 2em;
+    background-color: #dfdfdfdc;
+    border-radius: 5px;
+}
+
+.cctv_box2 {
+    width: 60%;
+    padding: 2em;
+    margin-top: 2em;
+    background-color: rgba(190, 69, 32, 0.904);
+    border-radius: 5px;
+}
+
+.cctv_box2 li {
+    line-height: 2.5em;
+}
+
+.cctv_background_2 {
+    display: none;
+}
+
+/* CONTACT PAGE */
+
+.contact_container {
+    position: relative;
+}
+
+.contact_container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url("glasgow.jpg");
+    filter: grayscale(100%);
+    z-index: -10;
+}
+
+.contact_details {
+    padding: 4em;
+}
+
+.contact_map {
+    position: absolute;
+    top: 150px;
+    right: 150px;
+}
+
+.contact_logo {
+    width: 20%;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1466px) {
+
+    /* ALARMS PAGE */
+
+    .alarm_background {
+        display: none;
+    }
+
+    .alarm_background_rotated {
+        display: flex;
+        position: absolute;
+        z-index: -100;
+        width: 100%;
+        filter: brightness(0.6);
+    }
+}
+
+@media screen and (max-width: 1230px) {
+
+    /* MONBILE MENU */
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+        position: fixed;
+        justify-content: flex-start;
+        top: 0;
+        background-color: rgb(93, 93, 95);
+        padding: 1em;
+        z-index: 400;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        color: rgb(226, 222, 222);
+    }
+
+    nav li {
+        margin: 0.5em;
+    }
+
+    .toggleMenu {
+        animation: menuSlider 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .toggleMenuBack {
+        animation: menuBackSlider 1s;
+        animation-fill-mode: forwards;
+    }
+
+    #btnMobileMenu {
+        visibility: visible;
+    }
+
+    /* HOMEPAHE */
+
+    #slideshow {
+        display: none;
+    }
+
+    .home_info {
+        flex-direction: column;
+        padding: 2em;
+        width: 85%;
+        font-size: 1em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .home_info_text {
+        padding-right: 0em;
+    }
+
+    .home_info_contact {
+        border-top: solid 2px rgb(235, 235, 235);
+        border-left: 0;
+        padding-left: 0;
+        margin-top: 3em;
+        padding-top: 3em;
+    }
+
+
+    .home_container {
+        flex-direction: column;
+        padding-top: 0em;
+    }
+
+    .home_bar {
+        height: 2px;
+        width: 310px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    section {
+        padding: 1.5em;
+    }
+
+    /* FOOTER */
+
+    footer {
+        overflow-x: hidden;
+    }
+
+    .footer_info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer_info div {
+        padding: 1.5em;
+    }
+
+    /* RISK PAGE */
+
+    .risk_box {
+        margin-top: 2em;
+    }
+
+    .risk_logo {
+        padding-right: 0;
+        padding-top: 0;
+        top: 160px;
+        transform: rotate(-90deg);
+    }
+
+    /* ALARMS PAGE */
+
+    .alarm_background_rotated {
+        display: flex;
+        position: absolute;
+        z-index: -100;
+        width: 100%;
+        filter: brightness(0.6);
+    }
+
+    .alarms_logo {
+        transform: rotate(-90deg);
+        right: -50px
+    }
+
+    /* FIRE EX PAGE */
+
+    .fire_ex_container h1 {
+        padding: 2em;
+        padding-bottom: 0;
+    }
+
+    /* CCTV PAGE */
+
+    .cctv_background {
+        display: none;
+    }
+
+    .cctv_background_2 {
+        display: flex;
+        width: 100%;
+        position: absolute;
+        z-index: -100;
+    }
+
+    .contact_details {
+        padding: 4em;
+    }
+
+    /* CONTACT PAGE */
+
+    .contact_container::before {
+        height: 100%;
+    }
+
+    .contact_map {
+        position: relative;
+        top: auto;
+        right: auto;
+        left: auto;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 4em;
+    }
+
+    .contact_map iframe {
+        width: 400px;
+    }
+
+    .contact_logo {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width:1040px) {
+
+    /* RISK PAGE */
+
+    .risk_box {
+        width: auto;
+        font-size: 14px;
+    }
+
+    .risk_logo {
+        display: none;
+    }
+
+    .summary_box {
+        width: auto;
+    }
+
+    /* ALARMS PAGE */
+
+    .alarm_background_rotated {
+        display: none;
+    }
+
+    .alarms_logo {
+        display: none;
+    }
+
+    .alarms_container {
+        padding: 2em;
+        font-size: 14px;
+    }
+
+    .alarms_box1 {
+        width: auto;
+    }
+
+    .alarms_box2 {
+        width: auto;
+
+    }
+
+    .alarms_box3 {
+        width: auto;
+
+    }
+
+    /* FIRE EX PAGE */
+
+    .fire_ex_container section {
+        width: auto;
+        padding: 2em;
+        font-size: 14px;
+    }
+
+    .fire_ex_container h1 {
+        padding: 1em;
+        padding-bottom: 0;
+    }
+
+    .subsection {
+        text-align: center;
+    }
+
+    .subsection img {
+        /* pointer-events: none; */
+        width: 150px;
+        margin-right: 1em;
+        margin-bottom: 1em;
+        filter: brightness(1);
+    }
+
+    #exImages {
+        display: none;
+    }
+
+    #exImagesMobile {
+        display: flex;
+        justify-content: center;
+    }
+
+    #exImagesMobile img {
+        position: fixed;
+        width: 50%;
+        z-index: 200;
+        top: 10%;
+    }
+
+    .exBackgrounModal {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.644);
+    }
+
+    .fire_ex_dummy_img {
+        display: none;
+    }
+
+    /* CCTV PAGE */
+
+    .cctv_container {
+        font-size: 14px;
+    }
+
+    .cctv_box1 {
+        width: auto;
+    }
+
+    .cctv_box2 {
+        width: auto;
+    }
+
+    .cctv_background_2 {
+        display: none;
+    }
+}
+
+@keyframes menuSlider {
+    from {
+        transform: translateX(-200px);
+    }
+
+    to {
+        transform: translateX(30px);
+    }
+}
+
+@keyframes menuBackSlider {
+    from {
+        transform: translateX(30px);
+    }
+
+    to {
+        transform: translateX(-300px);
+    }
+
+}
